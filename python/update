@@ -1,0 +1,17 @@
+import MySQLdb as mdb
+
+sql_host="172.19.108.132"
+sql_username="dustin"
+sql_password='$outhHi11s'
+sql_database="dustin"
+
+sql_connection=mdb.connect(sql_host,sql_username,sql_password,sql_database)
+	
+cursor = sql_connection.cursor()
+
+cursor.execute("UPDATE AUTHOR SET AUTHOR_FIRST = 'Tony WHERE AUTHOR_NUM = '1'"
+
+
+sql_connection.commit()
+cursor.close()
+sql_connection.close()
