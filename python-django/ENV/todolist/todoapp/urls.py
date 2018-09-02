@@ -24,5 +24,6 @@ urlpatterns = [
 #this url pattern refrences the view of index within ther todoapp 
 # $ indicates the url ends at todoapp/
 	url(r'^$',views.index,name='index'),
-
+	# todoapp/1 this passes in the task id of what was clicked to the url
+	url(r'^(?P<task_id>[0-9]+)/$',views.detail,name='detail')
 ]

@@ -5,5 +5,5 @@ from django.contrib import admin
 
 from .models import Task
 
-# Register your models here.
+# This adds the task model to the web interface for modification. Register your models here.
 admin.site.register(Task)

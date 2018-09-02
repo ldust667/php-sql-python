@@ -15,6 +15,10 @@ def	index(request):
 	#gathering list of all task objects
 	task_list = Task.objects.all()
 	#the loops below create two seperate list based on value in the Task sql
+	strname=', '.join([q.task_name for q in task_list])
+
+		
+
 	'''strpriority = []
 	#a is a global variable to be reset for iterations in loops
 	a=0
@@ -48,4 +52,8 @@ def	index(request):
 	
 	
 	#outputting the list in html
-	return HttpResponse("Variable is commented out.")
+	return HttpResponse(strname)
+
+
+def	detail(request,task_id):
+	return HttpResponse("This is task no %s" % task_id)
